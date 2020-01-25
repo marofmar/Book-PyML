@@ -40,11 +40,11 @@ def load_files(path):
         labels.append(r[1])
     return {"freqs": freqs, "labels": labels}
 
-data = load_files("c:/Users/Mads/Documents/Book-PyML/ch4/lang/train/*.txt")
-test = load_files("c:/Users/Mads/Documents/Book-PyML/ch4/lang/test/*.txt")
+data = load_files("./Book-PyML/ch4/lang/train/*.txt")
+test = load_files("./Book-PyML/ch4/lang/test/*.txt")
 
 # save the result in json 
-with open("c:/Users/Mads/Documents/Book-PyML/ch4/lang/freq.json", "w", encoding = 'utf-8') as fp:
+with open("./Book-PyML/ch4/lang/freq.json", "w", encoding = 'utf-8') as fp:
     json.dump([data, test], fp)
 
 # let's try gridSearchCV
